@@ -9,74 +9,56 @@ body {
 	overflow: hidden;
 }
 
-#clouds{
-	padding: 100px 0;
-	background: #c9dbe9;
-	background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
-	background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
-	background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+html {
+  height: 100%;
 }
 
-/*Time to finalise the cloud shape*/
-.cloud {
-	width: 200px; height: 60px;
-	background: #fff;
-	
-	border-radius: 200px;
-	-moz-border-radius: 200px;
-	-webkit-border-radius: 200px;
-	
-	position: relative; 
-
-	z-index: 10000;
+body {
+  overflow: hidden;
+  background: #c9dbe9;
+  background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+  background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
+  background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
 }
 
-.cloud:before, .cloud:after {
-	content: '';
-	position: absolute; 
-	background: #fff;
-	width: 100px; height: 80px;
-	position: absolute; top: -15px; left: 10px;
-	z-index: 1000;
-	
-	border-radius: 100px;
-	-moz-border-radius: 100px;
-	-webkit-border-radius: 100px;
-	
-	-webkit-transform: rotate(30deg);
-	transform: rotate(30deg);
-	-moz-transform: rotate(30deg);
+.floor {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
-.cloud:after {
-	width: 120px; height: 120px;
-	top: -55px; left: auto; right: 15px;
-	z-index: 1000;
+.floor .grass {
+  background: url(../images/grass.png) top center repeat-x;
+  height: 39px;
+  margin-top: -33px;
 }
 
-/*Time to animate*/
-.x1 {
-	left: 200px;
-	
-/*	-webkit-transform: scale(0.6);
-	-moz-transform: scale(0.6);
-	transform: scale(0.6);
-	opacity: 0.6;
-*/
-	-webkit-animation: moveclouds 15s linear infinite;
-	-moz-animation: moveclouds 15s linear infinite;
-	-o-animation: moveclouds 15s linear infinite;
+.floor .art {
+  background-image: url(../images/art.png);
+  margin-top: 0;
+  clear: left;
+  height: 180px;
 }
 
-@-webkit-keyframes moveclouds {
-	0% {margin-left: 1000px;}
-	100% {margin-left: -1000px;}
+footer {
+  width: 100%;
+  background-color: #44b750;
+  height: 3.5em;
 }
-@-moz-keyframes moveclouds {
-	0% {margin-left: 1000px;}
-	100% {margin-left: -1000px;}
+
+footer .search {
+  position: fixed;
+  bottom: -8px;
+  left: 10px;
 }
-@-o-keyframes moveclouds {
-	0% {margin-left: 1000px;}
-	100% {margin-left: -1000px;}
+
+footer p {
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  width: 200px;
+  font-size: 1.2em
 }
