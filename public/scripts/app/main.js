@@ -27,8 +27,7 @@
 		      var html = template();
 		      var element = $.parseHTML(_.trim(html))[0];
 
-					element.style.backgroundColor = 'rgba(0,127,127,' + ( Math.random() * 0.5 + 0.25 ) + ')';
-
+					element.style.backgroundColor = 'rgba(0, 204, 186,' + ( Math.random() * 0.5 + 0.25 ) + ')';
 					var object = new THREE.CSS3DObject( element );
 					object.position.x = Math.random() * 4000 - 2000;
 					object.position.y = Math.random() * 4000 - 2000;
